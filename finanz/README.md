@@ -18,15 +18,18 @@ between Windows, Mac OS X, and Linux.
 ## To Start
 Navigate into the vagrant folder :
 
-cd vagrant/
-vagrant up
+`cd vagrant/`
+`vagrant up`
 
-Note: 'vagrant up' will build the grant file that is already existing inside this folder.
+
+Note: `vagrant up` will build the grant file that is already existing inside this folder.
 if you want to adjust the CPU or Provisioning , you can do so by 'nano Vagrantfile' to edit the file.
 
 In our case we provisioned the virtual machine start with a website running on it.
 
 ## Provisioning
+
+```bash
 
 config.vm.provision "shell", inline: <<-SHELL
      yum install httpd wget unzip vim -y
@@ -42,7 +45,7 @@ config.vm.provision "shell", inline: <<-SHELL
      rm -rf /tmp/finance
    SHELL
 
-
+```
 ## To learn more
 
 To learn how to build a fully functional development environment, follow the
